@@ -14,11 +14,11 @@
 #'
 #' @export
 #'
-#' @examples {
-#' enabled_flag <- create_bool_feature_flag(TRUE)
-#' disabled_flag <- create_bool_feature_flag(FALSE)
+#' @examples
+#' {
+#'   enabled_flag <- create_bool_feature_flag(TRUE)
+#'   disabled_flag <- create_bool_feature_flag(FALSE)
 #' }
-#'
 create_bool_feature_flag <- function(value) {
   assert(is.logical(value) && length(value) == 1)
 
