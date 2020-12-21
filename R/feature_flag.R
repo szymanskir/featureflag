@@ -40,8 +40,10 @@ is_feature_flag <- function(feature_flag) {
 #' @noRd
 #'
 assert_feature_flag_class <- function(feature_flag) {
-  assert(is_feature_flag(feature_flag),
-         sprintf("The object must be an instance of the %s class", .feature_flag_class()))
+  assert(
+    is_feature_flag(feature_flag),
+    sprintf("The object must be an instance of the %s class", .feature_flag_class())
+  )
 }
 
 #' Checks if the given feature flag is enabled.
