@@ -13,3 +13,18 @@ assert <- function(expression, error) {
     stop(error, call. = FALSE)
   }
 }
+
+#' Prepends the class attribute of the passed object with the
+#' passed class name.
+#'
+#' @param x object whose class attribute should be prepended
+#' with the passed class_name
+#'
+#' @param class_name name of the class to prepend with
+#'
+#' @noRd
+#'
+prepend_class <- function(x, class_name) {
+  class(x) <- c(class_name, class(x))
+  x
+}
