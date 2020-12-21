@@ -10,7 +10,7 @@ test_that("bool feature flag is enabled when its value is set to TRUE", {
 })
 
 
-test_that("bool feature flag is disabled when its value is set to TRUE", {
+test_that("bool feature flag is disabled when its value is set to FALSE", {
   flag <- create_bool_feature_flag(FALSE)
   expect_false(is_enabled(flag))
 })
