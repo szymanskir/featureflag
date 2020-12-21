@@ -1,0 +1,4 @@
+- [ ] NEWS is updated if applicable
+- [ ] Docs are updated if applicable
+- [ ] Self review was performed
+- [ ] CI is passing
