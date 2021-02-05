@@ -1,0 +1,8 @@
+default:
+  extra_counter_flag: !expr featureflag::create_bool_feature_flag(value = TRUE)
+
+test:
+  extra_counter_flag: !expr featureflag::create_bool_feature_flag(value = TRUE)
+
+production:
+  extra_counter_flag: !expr featureflag::create_bool_feature_flag(value = FALSE)
