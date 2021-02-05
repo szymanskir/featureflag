@@ -4,7 +4,7 @@
 #' @param feature_flag flag which defines whether the provided
 #' expression should be evaluated
 #'
-#' @param expr expression to evalute when the feature_flag is enabled
+#' @param expr expression to evaluate when the feature_flag is enabled
 #'
 #' @export
 #'
@@ -14,7 +14,8 @@ feature_if <- function(feature_flag, expr) {
   expr <- substitute(expr)
 
   if (is_enabled(feature_flag)) {
-    eval(expr = expr)
+    expr_frame <- parent.frame() # frame in which the expression was defined
+    eval(expr = expr, envir = expr_frame)
   }
 }
 
@@ -25,9 +26,9 @@ feature_if <- function(feature_flag, expr) {
 #' @param feature_flag flag which defines which expression should be
 #' evaluated
 #'
-#' @param true_expr expression to evalute when the feature_flag is enabled
+#' @param true_expr expression to evaluate when the feature_flag is enabled
 #'
-#' @param false_expr expression to evalute when the feature_flag is disabled
+#' @param false_expr expression to evaluate when the feature_flag is disabled
 #'
 #' @export
 #'
@@ -37,9 +38,13 @@ feature_ifelse <- function(feature_flag, true_expr, false_expr) {
   true_expr <- substitute(true_expr)
   false_expr <- substitute(false_expr)
 
+
   if (is_enabled(feature_flag)) {
-    eval(expr = true_expr)
+    expr_to_eval <- true_expr
   } else {
-    eval(expr = false_expr)
+    expr_to_eval <- false_expr
   }
+
+  expr_frame <- parent.frame() # frame in which the expression was defined
+  eval(expr = expr_to_eval, envir = expr_frame)
 }
