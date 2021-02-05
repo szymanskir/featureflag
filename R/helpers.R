@@ -14,7 +14,8 @@ feature_if <- function(feature_flag, expr) {
   expr <- substitute(expr)
 
   if (is_enabled(feature_flag)) {
-    eval(expr = expr)
+    expr_frame <- parent.frame() # frame in which the expression was defined
+    eval(expr = expr, envir = expr_frame)
   }
 }
 
@@ -37,9 +38,13 @@ feature_ifelse <- function(feature_flag, true_expr, false_expr) {
   true_expr <- substitute(true_expr)
   false_expr <- substitute(false_expr)
 
+
   if (is_enabled(feature_flag)) {
-    eval(expr = true_expr)
+    expr_to_eval <- true_expr
   } else {
-    eval(expr = false_expr)
+    expr_to_eval <- false_expr
   }
+
+  expr_frame <- parent.frame() # frame in which the expression was defined
+  eval(expr = expr_to_eval, envir = expr_frame)
 }
