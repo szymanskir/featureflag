@@ -4,7 +4,7 @@
 #' @param feature_flag flag which defines whether the provided
 #' expression should be evaluated
 #'
-#' @param expr expression to evalute when the feature_flag is enabled
+#' @param expr expression to evaluate when the feature_flag is enabled
 #'
 #' @export
 #'
@@ -26,9 +26,9 @@ feature_if <- function(feature_flag, expr) {
 #' @param feature_flag flag which defines which expression should be
 #' evaluated
 #'
-#' @param true_expr expression to evalute when the feature_flag is enabled
+#' @param true_expr expression to evaluate when the feature_flag is enabled
 #'
-#' @param false_expr expression to evalute when the feature_flag is disabled
+#' @param false_expr expression to evaluate when the feature_flag is disabled
 #'
 #' @export
 #'

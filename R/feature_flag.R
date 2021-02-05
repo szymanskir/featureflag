@@ -48,6 +48,8 @@ assert_feature_flag_class <- function(feature_flag) {
 
 #' Checks if the given feature flag is enabled.
 #'
+#' @param feature_flag feature flag to be tested whether it is enabled
+#'
 #' @return TRUE if the feature flag is enabled.
 #'
 #' @export

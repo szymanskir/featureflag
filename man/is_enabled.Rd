@@ -6,6 +6,9 @@
 \usage{
 is_enabled(feature_flag)
 }
+\arguments{
+\item{feature_flag}{feature flag to be tested whether it is enabled}
+}
 \value{
 TRUE if the feature flag is enabled.
 }

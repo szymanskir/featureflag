@@ -11,7 +11,7 @@ feature_if(feature_flag, expr)
 \item{feature_flag}{flag which defines whether the provided
 expression should be evaluated}
 
-\item{expr}{expression to evalute when the feature_flag is enabled}
+\item{expr}{expression to evaluate when the feature_flag is enabled}
 }
 \description{
 Evaluates the provided expression if the feature flag

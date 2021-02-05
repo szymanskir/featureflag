@@ -11,9 +11,9 @@ feature_ifelse(feature_flag, true_expr, false_expr)
 \item{feature_flag}{flag which defines which expression should be
 evaluated}
 
-\item{true_expr}{expression to evalute when the feature_flag is enabled}
+\item{true_expr}{expression to evaluate when the feature_flag is enabled}
 
-\item{false_expr}{expression to evalute when the feature_flag is disabled}
+\item{false_expr}{expression to evaluate when the feature_flag is disabled}
 }
 \description{
 Evaluates one or the other expression based on whether the feature flag
