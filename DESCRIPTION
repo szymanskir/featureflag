@@ -1,6 +1,6 @@
 Package: featureflag
 Title: Turn features on and off using feature flags
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person(given = "Ryszard",
            family = "Szymański",
@@ -17,3 +17,5 @@ Suggests:
     testthat,
     spelling
 Language: en-US
+URL: https://github.com/szymanskir/featureflag
+BugReports: https://github.com/szymanskir/featureflag/issues
