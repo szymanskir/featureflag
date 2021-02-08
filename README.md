@@ -66,7 +66,8 @@ feature_ifelse(
 ### Shiny example
 
 The source code of all examples is available in the [examples
-folder](./examples) of the repository.
+folder](https://github.com/szymanskir/featureflag/tree/master/examples)
+of the repository.
 
 Feature flags can be especially useful when developing shiny
 applications. The example below shows how feature flags can be used to
