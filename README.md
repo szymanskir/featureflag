@@ -118,4 +118,5 @@ production:
 
 You can create feature flags that are turned on based on your own custom
 criteria. The procedure on how to define your own feature flag is
-presented in [this tutorial](./docs/define-custom-feature-flags.md)
+presented in [this
+tutorial](https://github.com/szymanskir/featureflag/blob/master/docs/define-custom-feature-flags.md)
