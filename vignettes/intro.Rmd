@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 # Motivation
 
-The `featureflag` package was created in order to allow R users to easily make use of feature flags. Feature flags allow developers to turn application features on and off in form of configuration. They allow to you to avoid issues related to long live branching by decoupling feature rollout from the deployment process.
+The `featureflag` package was created in order to allow R users to easily make use of feature flags. Feature flags allow developers to turn application features on and off in form of configuration. They allow to you to avoid issues related to long live branching by decoupling feature roll-out from the deployment process.
 
 If you are interested in learning more about feature flags, check out
 those great resources:
