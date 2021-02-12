@@ -1,0 +1,73 @@
+---
+title: "featureflag - basic usage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{featureflag - basic usage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Motivation
+
+The `featureflag` package was created in order to allow R users to easily make use of feature flags. Feature flags allow developers to turn application features on and off in form of configuration. They allow to you to avoid issues related to long live branching by decoupling feature rollout from the deployment process.
+
+If you are interested in learning more about feature flags, check out
+those great resources:
+
+  - <https://martinfowler.com/articles/feature-toggles.html>
+  - <https://featureflags.io/>
+  - <https://en.wikipedia.org/wiki/Feature_toggle>
+  
+  
+# Usage
+
+```{r setup}
+library(featureflag)
+```
+
+The `featureflag` package currently supports one type of feature flags: bool feature flags (simple on and off flags). A bool feature flag can be created like this:
+
+```{r}
+my_bool_feature_flag <- create_bool_feature_flag(value = TRUE)
+```
+
+Now you can use it in combination with the `is_enabled` method to branch out logic in your application:
+
+```{r}
+if (is_enabled(my_bool_feature_flag)) {
+  print("Running my feature...")  
+}
+```
+
+In case we wanted to run some default functionality when our feature flag is off, we can simply add an else statement:
+
+```{r}
+if (is_enabled(my_bool_feature_flag)) {
+  print("Running my feature...")  
+} else {
+  print("Running my default functionality...")
+}
+```
+
+`featureflag` offers helper methods to avoid boilerplate `if` and `if/else` code. They can be replaced by using the `feature_if` and `feature_ifelse` helpers. The above examples can be rewritten as:
+
+```{r}
+feature_if(my_bool_feature_flag, {
+  print("Running my feature...")
+})
+```
+
+```{r}
+feature_ifelse(my_bool_feature_flag, {
+  print("Running my feature...")
+}, {
+  print("Running my default_functionality...")
+})
+```
