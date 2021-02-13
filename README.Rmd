@@ -97,7 +97,7 @@ server <- function(input, output, session) {
 
 ### Defining feature flags in configuration files
 
-The `featureflag` package can also be used in combination with the [config](https://cran.r-project.org/web/packages/config/index.html) package by using the R code execution feature:
+The `featureflag` package can also be used in combination with the [config](https://CRAN.R-project.org/package=config) package by using the R code execution feature:
 
 ```yml
 default:
