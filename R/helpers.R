@@ -8,6 +8,13 @@
 #'
 #' @export
 #'
+#' @examples
+#' {
+#'   flag <- create_bool_feature_flag(TRUE)
+#'
+#'   feature_if(flag, {2 + 7})
+#' }
+#'
 feature_if <- function(feature_flag, expr) {
   assert_feature_flag_class(feature_flag)
 
@@ -31,6 +38,19 @@ feature_if <- function(feature_flag, expr) {
 #' @param false_expr expression to evaluate when the feature_flag is disabled
 #'
 #' @export
+#'
+#' @examples
+#' {
+#'   flag <- create_bool_feature_flag(TRUE)
+#'
+#'   feature_ifelse(
+#'     flag, {
+#'       2 * 7
+#'     }, {
+#'       3 * 7
+#'     }
+#'   )
+#' }
 #'
 feature_ifelse <- function(feature_flag, true_expr, false_expr) {
   assert_feature_flag_class(feature_flag)

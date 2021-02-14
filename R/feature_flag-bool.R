@@ -52,6 +52,15 @@ is_bool_feature_flag <- function(feature_flag) {
 #'
 #' @export
 #'
+#' @examples
+#' {
+#'   enabled_flag <- create_bool_feature_flag(TRUE)
+#'
+#'   if (is_enabled(enabled_flag)) {
+#'     print("The flag is enabled!")
+#'   }
+#' }
+#'
 is_enabled.bool_feature_flag <- function(feature_flag) { # nolint
   stopifnot(is_bool_feature_flag(feature_flag))
   feature_flag$value
