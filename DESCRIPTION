@@ -1,5 +1,5 @@
 Package: featureflag
-Title: Turn features on and off using feature flags
+Title: Turn Features On and Off using Feature Flags
 Version: 0.1.0
 Authors@R: 
     person(given = "Ryszard",
@@ -7,7 +7,9 @@ Authors@R:
            role = c("aut", "cre"),
            email = "ryszard.szymanski@outlook.com")
 Description: Feature flags allow developers to turn features of their
-    software on and off in form of configuration. 
+    software on and off in form of configuration. This package provides
+    functions for creating feature flags in code. It exposes an interface
+    for defining own feature flags which are enabled based on custom criteria.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
