@@ -17,3 +17,11 @@ expression should be evaluated}
 Evaluates the provided expression if the feature flag
 is enabled.
 }
+\examples{
+{
+  flag <- create_bool_feature_flag(TRUE)
+
+  feature_if(flag, {2 + 7})
+}
+
+}

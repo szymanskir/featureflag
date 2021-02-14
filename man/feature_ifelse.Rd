@@ -19,3 +19,17 @@ evaluated}
 Evaluates one or the other expression based on whether the feature flag
 is enabled.
 }
+\examples{
+{
+  flag <- create_bool_feature_flag(TRUE)
+
+  feature_ifelse(
+    flag, {
+      2 * 7
+    }, {
+      3 * 7
+    }
+  )
+}
+
+}
