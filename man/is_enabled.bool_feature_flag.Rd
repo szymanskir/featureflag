@@ -24,5 +24,4 @@ Checks if the given bool feature flag is enabled
     print("The flag is enabled!")
   }
 }
-
 }

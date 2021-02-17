@@ -11,6 +11,9 @@ create_bool_feature_flag(value)
 \item{value}{single logical determining whether the
 flag should be enabled}
 }
+\value{
+feature flag object of the bool value
+}
 \description{
 Creates an instance of a bool feature flag
 with the specified bool value.

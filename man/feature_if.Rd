@@ -13,15 +13,24 @@ expression should be evaluated}
 
 \item{expr}{expression to evaluate when the feature_flag is enabled}
 }
+\value{
+If the passed \code{feature_flag} is enabled, than the result of the evaluation
+of the passed expression is returned. Otherwise there is no return value.
+}
 \description{
 Evaluates the provided expression if the feature flag
 is enabled.
+}
+\details{
+The passed expression is evaluated in the frame where \code{feature_if}
+is called.
 }
 \examples{
 {
   flag <- create_bool_feature_flag(TRUE)
 
-  feature_if(flag, {2 + 7})
+  feature_if(flag, {
+    2 + 7
+  })
 }
-
 }

@@ -4,6 +4,7 @@ This is a resubmission. In this version I have:
 * Fixed the DESCRIPTION Title field to be in title case
 * Extended the description of the package
 * Added more examples for exported functions
+* Added \value to .Rd files of exported functions
 
 ## Test environments
 * local R installation, R 3.6.3
