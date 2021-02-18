@@ -66,7 +66,8 @@ feature_ifelse(
 ### Shiny example
 
 The source code of all examples is available in the [examples
-folder](./examples) of the repository.
+folder](https://github.com/szymanskir/featureflag/tree/master/examples)
+of the repository.
 
 Feature flags can be especially useful when developing shiny
 applications. The example below shows how feature flags can be used to
@@ -99,8 +100,8 @@ server <- function(input, output, session) {
 ### Defining feature flags in configuration files
 
 The `featureflag` package can also be used in combination with the
-[config](https://cran.r-project.org/web/packages/config/index.html)
-package by using the R code execution feature:
+[config](https://CRAN.R-project.org/package=config) package by using the
+R code execution feature:
 
 ``` yml
 default:
@@ -117,4 +118,5 @@ production:
 
 You can create feature flags that are turned on based on your own custom
 criteria. The procedure on how to define your own feature flag is
-presented in [this tutorial](./docs/define-custom-feature-flags.md)
+presented in [this
+tutorial](https://github.com/szymanskir/featureflag/blob/master/docs/define-custom-feature-flags.md)

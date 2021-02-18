@@ -15,7 +15,26 @@ evaluated}
 
 \item{false_expr}{expression to evaluate when the feature_flag is disabled}
 }
+\value{
+The result of evaluating \code{true_expr} is returned if the passed feature_flag
+is enabled. Otherwise the result of evaluating \code{false_expr} is returned.
+}
 \description{
 Evaluates one or the other expression based on whether the feature flag
 is enabled.
+}
+\details{
+The passed expression is evaluated in the frame where \code{feature_ifelse}
+is called.
+}
+\examples{
+{
+  flag <- create_bool_feature_flag(TRUE)
+
+  feature_ifelse(
+    flag,
+    2 * 7,
+    3 * 7
+  )
+}
 }

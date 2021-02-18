@@ -1,13 +1,15 @@
 Package: featureflag
-Title: Turn features on and off using feature flags
-Version: 0.0.0.9000
+Title: Turn Features On and Off using Feature Flags
+Version: 0.1.0
 Authors@R: 
     person(given = "Ryszard",
            family = "Szymański",
            role = c("aut", "cre"),
            email = "ryszard.szymanski@outlook.com")
 Description: Feature flags allow developers to turn features of their
-    software on and off in form of configuration. 
+    software on and off in form of configuration. This package provides
+    functions for creating feature flags in code. It exposes an interface
+    for defining own feature flags which are enabled based on custom criteria.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -15,5 +17,10 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Suggests: 
     testthat,
-    spelling
+    spelling,
+    knitr,
+    rmarkdown
 Language: en-US
+URL: https://github.com/szymanskir/featureflag
+BugReports: https://github.com/szymanskir/featureflag/issues
+VignetteBuilder: knitr

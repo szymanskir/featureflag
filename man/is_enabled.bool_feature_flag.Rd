@@ -16,3 +16,12 @@ TRUE if the feature flag is enabled.
 \description{
 Checks if the given bool feature flag is enabled
 }
+\examples{
+{
+  enabled_flag <- create_bool_feature_flag(TRUE)
+
+  if (is_enabled(enabled_flag)) {
+    print("The flag is enabled!")
+  }
+}
+}

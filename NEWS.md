@@ -1,4 +1,4 @@
-# featureflag 0.0.0.9000
+# featureflag 0.1.0
 
 * Added helper functions that correspond to `if {}` and `if {} else {}` blocks 
 * Added boolean feature flags
