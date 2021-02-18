@@ -7,6 +7,10 @@
 
 [![R build
 status](https://github.com/szymanskir/featureflag/workflows/R-CMD-check/badge.svg)](https://github.com/szymanskir/featureflag/actions)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/featureflag)](https://CRAN.R-project.org/package=featureflag)
+[![CRAN download
+status](https://cranlogs.r-pkg.org/badges/grand-total/featureflag)](https://CRAN.R-project.org/package=featureflag)
 <!-- badges: end -->
 
 The `featureflag` package provides a feature flag (also called as
