@@ -18,8 +18,8 @@
 #'
 #' @examples
 #' {
-#'   always_enabled_flag <- create_percentage_flag(percentage = 1)
-#'   randomly_enabled_flag <- create_percentage_flag(percentage = 0.5)
+#'   always_enabled_flag <- create_percentage_feature_flag(percentage = 1)
+#'   randomly_enabled_flag <- create_percentage_feature_flag(percentage = 0.5)
 #' }
 #'
 create_percentage_feature_flag <- function(percentage) {
@@ -49,7 +49,7 @@ is_percentage_feature_flag <- function(feature_flag) {
 
 #' Checks if the given percentage flag is enabled
 #'
-#' #' @param feature_flag flag to be checked whether it is
+#' @param feature_flag flag to be checked whether it is
 #' enabled
 #'
 #' @return TRUE if the feature flag is enabled.
@@ -67,6 +67,6 @@ is_percentage_feature_flag <- function(feature_flag) {
 is_enabled.percentage_feature_flag <- function(feature_flag) {
   is_percentage_feature_flag(feature_flag)
 
-  random_value <- runif(n = 1, min = 0, max = 1)
+  random_value <- stats::runif(n = 1, min = 0, max = 1)
   random_value <= feature_flag$percentage
 }
