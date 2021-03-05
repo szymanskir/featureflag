@@ -32,8 +32,11 @@ those great resources:
 library(featureflag)
 ```
 
-The `featureflag` package currently supports one type of feature flags: bool feature flags (simple on and off flags). A bool feature flag can be created like this:
+The `featureflag` package currently supports the following types of feature flags: 
+* bool feature flags - simple on and off flags
+* percentage feature flags - flags that are randomly enabled/disabled based on the configured percentage
 
+A bool feature flag can be created like this:
 ```{r}
 my_bool_feature_flag <- create_bool_feature_flag(value = TRUE)
 ```

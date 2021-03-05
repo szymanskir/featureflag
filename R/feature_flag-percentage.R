@@ -6,7 +6,22 @@
   "percentage_feature_flag"
 }
 
-
+#' Creates an instance of a percentage feature flag
+#' with a specified chance of being enabled
+#'
+#' @param percentage change of being enabled e.g. 1 for always
+#' being enabled
+#'
+#' @return feature flag object of the percentage type
+#'
+#' @export
+#'
+#' @examples
+#' {
+#'   always_enabled_flag <- create_percentage_flag(percentage = 1)
+#'   randomly_enabled_flag <- create_percentage_flag(percentage = 0.5)
+#' }
+#'
 create_percentage_feature_flag <- function(percentage) {
   assert(length(percentage) == 1)
   assert(percentage >= 0 && percentage <= 1)
@@ -17,12 +32,38 @@ create_percentage_feature_flag <- function(percentage) {
   prepend_class(flag, .percentage_feature_flag_class())
 }
 
-
+#' Checks if the given object is an instance of the
+#' percentage feature flag class
+#'
+#' @param feature_flag object to check whether it is an instance
+#' of the bool feature flag class
+#'
+#' @return TRUE if the object is an instance of the bool feature
+#' flag class.
+#'
+#' @noRd
+#'
 is_percentage_feature_flag <- function(feature_flag) {
   inherits(feature_flag, .percentage_feature_flag_class())
 }
 
-
+#' Checks if the given percentage flag is enabled
+#'
+#' #' @param feature_flag flag to be checked whether it is
+#' enabled
+#'
+#' @return TRUE if the feature flag is enabled.
+#'
+#' @export
+#'
+#' @examples
+#' {
+#'   enabled_flag <- create_percentage_feature_flag(1)
+#'
+#'   if (is_enabled(enabled_flag)) {
+#'     print("The flag is enabled!")
+#'   }
+#' }
 is_enabled.percentage_feature_flag <- function(feature_flag) {
   is_percentage_feature_flag(feature_flag)
 
