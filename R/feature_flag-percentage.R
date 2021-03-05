@@ -21,7 +21,6 @@
 #'   always_enabled_flag <- create_percentage_feature_flag(percentage = 1)
 #'   randomly_enabled_flag <- create_percentage_feature_flag(percentage = 0.5)
 #' }
-#'
 create_percentage_feature_flag <- function(percentage) {
   assert(length(percentage) == 1)
   assert(percentage >= 0 && percentage <= 1)
