@@ -64,7 +64,7 @@ is_percentage_feature_flag <- function(feature_flag) {
 #'     print("The flag is enabled!")
 #'   }
 #' }
-is_enabled.percentage_feature_flag <- function(feature_flag) {
+is_enabled.percentage_feature_flag <- function(feature_flag) { # nolint
   is_percentage_feature_flag(feature_flag)
 
   random_value <- stats::runif(n = 1, min = 0, max = 1)
