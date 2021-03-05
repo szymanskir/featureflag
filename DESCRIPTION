@@ -19,7 +19,8 @@ Suggests:
     testthat,
     spelling,
     knitr,
-    rmarkdown
+    rmarkdown,
+    mockery
 Language: en-US
 URL: https://github.com/szymanskir/featureflag
 BugReports: https://github.com/szymanskir/featureflag/issues
