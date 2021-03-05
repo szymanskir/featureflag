@@ -38,8 +38,14 @@ devtools::install_github("szymanskir/featureflag")
 
 ### Simple example
 
-The `featureflag` package currently supports one type of feature flags:
-bool feature flags (simple on and off flags):
+The `featureflag` package currently supports the following types of
+feature flags:
+
+  - bool feature flags - simple on and off flags
+  - percentage feature flags - flags that are randomly enabled/disabled
+    based on the configured percentage
+
+<!-- end list -->
 
 ``` r
 library(featureflag)

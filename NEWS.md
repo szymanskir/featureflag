@@ -1,5 +1,9 @@
 # featureflag (development version)
 
+# feature flag 0.1.0.9000
+
+* Added percentage feature flags
+
 # featureflag 0.1.0
 
 * Added helper functions that correspond to `if {}` and `if {} else {}` blocks 
