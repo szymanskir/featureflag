@@ -9,7 +9,7 @@
 #' Creates an instance of a percentage feature flag
 #' with a specified chance of being enabled
 #'
-#' @param percentage change of being enabled e.g. 1 for always
+#' @param percentage chance of being enabled e.g. 1 for always
 #' being enabled
 #'
 #' @return feature flag object of the percentage type
@@ -36,9 +36,9 @@ create_percentage_feature_flag <- function(percentage) {
 #' percentage feature flag class
 #'
 #' @param feature_flag object to check whether it is an instance
-#' of the bool feature flag class
+#' of the percentage feature flag class
 #'
-#' @return TRUE if the object is an instance of the bool feature
+#' @return TRUE if the object is an instance of the percentage feature
 #' flag class.
 #'
 #' @noRd
