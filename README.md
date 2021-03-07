@@ -27,6 +27,13 @@ those great resources:
 
 ## Installation
 
+The `featureflag` package is available on CRAN and can be installed
+with:
+
+``` r
+install.packages("featureflag")
+```
+
 Install the development version from [GitHub](https://github.com/) with:
 
 ``` r

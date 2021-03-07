@@ -32,6 +32,11 @@ If you are interested in learning more about feature flags, check out those grea
 
 ## Installation
 
+The `featureflag` package is available on CRAN and can be installed with:
+```r
+install.packages("featureflag")
+```
+
 Install the development version from [GitHub](https://github.com/) with:
 
 ```r
