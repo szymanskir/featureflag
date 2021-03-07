@@ -3,6 +3,7 @@
 # feature flag 0.1.0.9000
 
 * Added percentage feature flags
+* Added time period feature flags
 
 # featureflag 0.1.0
 
