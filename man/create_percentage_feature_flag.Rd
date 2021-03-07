@@ -8,7 +8,7 @@ with a specified chance of being enabled}
 create_percentage_feature_flag(percentage)
 }
 \arguments{
-\item{percentage}{change of being enabled e.g. 1 for always
+\item{percentage}{chance of being enabled e.g. 1 for always
 being enabled}
 }
 \value{
@@ -23,5 +23,4 @@ with a specified chance of being enabled
   always_enabled_flag <- create_percentage_feature_flag(percentage = 1)
   randomly_enabled_flag <- create_percentage_feature_flag(percentage = 0.5)
 }
-
 }
