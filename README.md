@@ -44,6 +44,9 @@ feature flags:
   - bool feature flags - simple on and off flags
   - percentage feature flags - flags that are randomly enabled/disabled
     based on the configured percentage
+  - time period feature flags - flags that are enabled during a
+    speficied time period e.g. from 2020-01-01 10:00:00 until 2020-02-01
+    10:00:00
 
 <!-- end list -->
 
