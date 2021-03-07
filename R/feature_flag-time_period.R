@@ -21,22 +21,20 @@
 #'
 #' @examples
 #' {
-#'    two_sided_flag <- create_time_period_feature_flag(
-#'       from = ISOdatetime(2020, 10, 10, 0, 0, 0, tz = "UTC"),
-#'       to = ISOdatetime(2020, 11, 10, 0, 0, 0, tz = "UTC")
-#'    )
+#'   two_sided_flag <- create_time_period_feature_flag(
+#'     from = ISOdatetime(2020, 10, 10, 0, 0, 0, tz = "UTC"),
+#'     to = ISOdatetime(2020, 11, 10, 0, 0, 0, tz = "UTC")
+#'   )
 #'
-#'    left_sided_flag <- create_time_period_feature_flag(
-#'       from = ISOdatetime(2020, 10, 10, 0, 0, 0, tz = "UTC")
-#'    )
+#'   left_sided_flag <- create_time_period_feature_flag(
+#'     from = ISOdatetime(2020, 10, 10, 0, 0, 0, tz = "UTC")
+#'   )
 #'
-#'    right_sided_flag <- create_time_period_feature_flag(
-#'       to = ISOdatetime(2020, 10, 10, 0, 0, 0, tz = "UTC")
-#'    )
-#'
+#'   right_sided_flag <- create_time_period_feature_flag(
+#'     to = ISOdatetime(2020, 10, 10, 0, 0, 0, tz = "UTC")
+#'   )
 #' }
-#'
-create_time_period_feature_flag <- function(from = NULL, to = NULL) { #nolint
+create_time_period_feature_flag <- function(from = NULL, to = NULL) { # nolint
   assert(any(!c(is.null(from), is.null(to))), "At least a single boundary has to be defined.")
   assert_null_or_datetime(from)
   assert_null_or_datetime(to)
@@ -76,15 +74,14 @@ is_time_period_feature_flag <- function(feature_flag) {
 #'
 #' @examples
 #' {
-#'    feature_flag <- create_time_period_feature_flag(
-#'       from = ISOdatetime(2020, 10, 10, 0, 0, 0, tz = "UTC")
-#'    )
+#'   feature_flag <- create_time_period_feature_flag(
+#'     from = ISOdatetime(2020, 10, 10, 0, 0, 0, tz = "UTC")
+#'   )
 #'
-#'    if (is_enabled(feature_flag)) {
-#'       print("The flag is enabled!")
-#'    }
+#'   if (is_enabled(feature_flag)) {
+#'     print("The flag is enabled!")
+#'   }
 #' }
-#'
 is_enabled.time_period_feature_flag <- function(feature_flag) { # nolint
   is_time_period_feature_flag(feature_flag)
 
