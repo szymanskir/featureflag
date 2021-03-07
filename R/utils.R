@@ -48,6 +48,6 @@ null_or_datetime <- function(x) {
 #'
 #' @noRd
 #'
-assert_null_or_datetime <- function(x){
+assert_null_or_datetime <- function(x) {
   assert(null_or_datetime(x), "Object should be NULL or a non NA datetime instance")
 }
