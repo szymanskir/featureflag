@@ -5,8 +5,7 @@
 
 <!-- badges: start -->
 
-[![R build
-status](https://github.com/szymanskir/featureflag/workflows/R-CMD-check/badge.svg)](https://github.com/szymanskir/featureflag/actions)
+[![R-CMD-check](https://github.com/szymanskir/featureflag/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/szymanskir/featureflag/actions/workflows/R-CMD-check.yaml)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/featureflag)](https://CRAN.R-project.org/package=featureflag)
 [![CRAN download
@@ -21,9 +20,9 @@ configuration.
 If you are interested in learning more about feature flags, check out
 those great resources:
 
-  - <https://martinfowler.com/articles/feature-toggles.html>
-  - <https://featureflags.io/>
-  - <https://en.wikipedia.org/wiki/Feature_toggle>
+- <https://martinfowler.com/articles/feature-toggles.html>
+- <https://featureflags.io/>
+- <https://en.wikipedia.org/wiki/Feature_toggle>
 
 ## Installation
 
@@ -48,14 +47,11 @@ devtools::install_github("szymanskir/featureflag")
 The `featureflag` package currently supports the following types of
 feature flags:
 
-  - bool feature flags - simple on and off flags
-  - percentage feature flags - flags that are randomly enabled/disabled
-    based on the configured percentage
-  - time period feature flags - flags that are enabled during a
-    speficied time period e.g. from 2020-01-01 10:00:00 until 2020-02-01
-    10:00:00
-
-<!-- end list -->
+- bool feature flags - simple on and off flags
+- percentage feature flags - flags that are randomly enabled/disabled
+  based on the configured percentage
+- time period feature flags - flags that are enabled during a speficied
+  time period e.g. from 2020-01-01 10:00:00 until 2020-02-01 10:00:00
 
 ``` r
 library(featureflag)

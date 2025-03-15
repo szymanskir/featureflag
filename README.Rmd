@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # featureflag
 
 <!-- badges: start -->
-[![R build status](https://github.com/szymanskir/featureflag/workflows/R-CMD-check/badge.svg)](https://github.com/szymanskir/featureflag/actions)
+[![R-CMD-check](https://github.com/szymanskir/featureflag/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/szymanskir/featureflag/actions/workflows/R-CMD-check.yaml)
 [![CRAN status](https://www.r-pkg.org/badges/version/featureflag)](https://CRAN.R-project.org/package=featureflag)
 [![CRAN download status](https://cranlogs.r-pkg.org/badges/grand-total/featureflag)](https://CRAN.R-project.org/package=featureflag)
 <!-- badges: end -->
