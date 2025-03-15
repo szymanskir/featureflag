@@ -16,12 +16,14 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Suggests: 
-    testthat,
+    testthat (>= 3.0.0),
     spelling,
     knitr,
     rmarkdown,
-    mockery
+    mockery,
+    shiny
 Language: en-US
 URL: https://github.com/szymanskir/featureflag
 BugReports: https://github.com/szymanskir/featureflag/issues
 VignetteBuilder: knitr
+Config/testthat/edition: 3
