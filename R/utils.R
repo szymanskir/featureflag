@@ -51,3 +51,22 @@ null_or_datetime <- function(x) {
 assert_null_or_datetime <- function(x) {
   assert(null_or_datetime(x), "Object should be NULL or a non NA datetime instance")
 }
+
+#' Checks if shiny is available
+#'
+#' @noRd
+#'
+is_shiny_available <- function() {
+  requireNamespace("shiny", quietly = TRUE)
+}
+
+#' Throws an error if shiny is not available
+#'
+#' @noRd
+#'
+assert_shiny_available <- function() {
+  assert(
+    expression = is_shiny_available(),
+    error = "'shiny' has to be installed to use this functionality"
+  )
+}
