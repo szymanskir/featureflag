@@ -18,13 +18,12 @@ Checks if the given bool feature flag is enabled
 }
 \examples{
 {
-   feature_flag <- create_time_period_feature_flag(
-      from = ISOdatetime(2020, 10, 10, 0, 0, 0, tz = "UTC")
-   )
+  feature_flag <- create_time_period_feature_flag(
+    from = ISOdatetime(2020, 10, 10, 0, 0, 0, tz = "UTC")
+  )
 
-   if (is_enabled(feature_flag)) {
-      print("The flag is enabled!")
-   }
+  if (is_enabled(feature_flag)) {
+    print("The flag is enabled!")
+  }
 }
-
 }
