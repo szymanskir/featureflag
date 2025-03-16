@@ -4,6 +4,7 @@
 
 * Added percentage feature flags
 * Added time period feature flags
+* Added connect user feature flag (#31)
 
 # featureflag 0.1.0
 
