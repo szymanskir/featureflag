@@ -66,6 +66,13 @@ is_percentage_feature_flag <- function(feature_flag) {
 is_enabled.percentage_feature_flag <- function(feature_flag) { # nolint
   is_percentage_feature_flag(feature_flag)
 
-  random_value <- stats::runif(n = 1, min = 0, max = 1)
+  random_value <- get_random_value()
   random_value <= feature_flag$percentage
+}
+
+#' Samples a value from the uniform distribution
+#' @noRd
+#'
+get_random_value <- function() {
+  stats::runif(n = 1, min = 0, max = 1)
 }
