@@ -85,10 +85,17 @@ is_time_period_feature_flag <- function(feature_flag) {
 is_enabled.time_period_feature_flag <- function(feature_flag) { # nolint
   is_time_period_feature_flag(feature_flag)
 
-  current_datetime <- Sys.time()
+  current_datetime <- get_current_time()
 
   is_from_boundary_met <- is.null(feature_flag$from) || (feature_flag$from <= current_datetime)
   is_to_boundary_met <- is.null(feature_flag$to) || (feature_flag$to >= current_datetime)
 
   is_from_boundary_met && is_to_boundary_met
+}
+
+
+#' Returns the current time
+#' @noRd
+get_current_time <- function() {
+  Sys.time()
 }
