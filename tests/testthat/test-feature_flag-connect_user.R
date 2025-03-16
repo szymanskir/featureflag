@@ -1,5 +1,5 @@
 test_that("connect  user feature flag create method checks the correctness of arguments", {
-  expect_error(create_connect_user_feature_flag(c(1,2,3)))
+  expect_error(create_connect_user_feature_flag(c(1, 2, 3)))
   expect_error(create_connect_user_feature_flag(NULL))
 })
 

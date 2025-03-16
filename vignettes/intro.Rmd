@@ -46,7 +46,7 @@ Now you can use it in combination with the `is_enabled` method to branch out log
 
 ```{r}
 if (is_enabled(my_bool_feature_flag)) {
-  print("Running my feature...")  
+  print("Running my feature...")
 }
 ```
 
@@ -54,7 +54,7 @@ In case we wanted to run some default functionality when our feature flag is off
 
 ```{r}
 if (is_enabled(my_bool_feature_flag)) {
-  print("Running my feature...")  
+  print("Running my feature...")
 } else {
   print("Running my default functionality...")
 }
