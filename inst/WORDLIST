@@ -1,7 +1,3 @@
+CMD
 bool
 config
-https
-io
-martinfowler
-ommit
-wikipedia
