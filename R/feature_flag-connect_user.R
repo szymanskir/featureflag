@@ -7,7 +7,7 @@
 }
 
 #' Creates an instance of a connect feature flag
-#' with the specified bool value.
+#' that is enabled for specific users
 #'
 #' @param users users for which the feature flag
 #' should be enabled
@@ -69,7 +69,7 @@ is_connect_user_feature_flag <- function(feature_flag) {
 #'     expr = is_enabled(flag)
 #'   )
 #'
-#'   # Returns FALSE if the session$user does not matche the specified users
+#'   # Returns FALSE if the session$user does not match the specified users
 #'   mock_session <- shiny::MockShinySession$new()
 #'   mock_session$user <- "user2"
 #'   shiny::withReactiveDomain(
