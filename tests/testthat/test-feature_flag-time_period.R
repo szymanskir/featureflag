@@ -5,7 +5,7 @@ test_that("Time period feature flags are enabled within specified boundaries", {
   )
 
   sys_time_stub <- function() ISOdatetime(2020, 1, 1, 12, 0, 0, tz = "UTC")
-  mockery::stub(is_enabled.time_period_feature_flag, "Sys.time", sys_time_stub)
+  local_mocked_bindings(get_current_time = sys_time_stub)
 
   expect_true(is_enabled(feature_flag))
 })
@@ -18,7 +18,7 @@ test_that("Time period feature flags are disabled when not in specified boundari
   )
 
   sys_time_stub <- function() ISOdatetime(2020, 1, 1, 15, 0, 0, tz = "UTC")
-  mockery::stub(is_enabled.time_period_feature_flag, "Sys.time", sys_time_stub)
+  local_mocked_bindings(get_current_time = sys_time_stub)
 
   expect_false(is_enabled(feature_flag))
 })
@@ -29,7 +29,7 @@ test_that("Time period feature flags bounded from are enabled from specified bou
   )
 
   sys_time_stub <- function() ISOdatetime(2920, 1, 1, 15, 0, 0, tz = "UTC")
-  mockery::stub(is_enabled.time_period_feature_flag, "Sys.time", sys_time_stub)
+  local_mocked_bindings(get_current_time = sys_time_stub)
 
   expect_true(is_enabled(feature_flag))
 })
@@ -41,7 +41,7 @@ test_that("Time period feature flags bounded from are disabled to specified boun
   )
 
   sys_time_stub <- function() ISOdatetime(2020, 1, 1, 9, 59, 59, tz = "UTC")
-  mockery::stub(is_enabled.time_period_feature_flag, "Sys.time", sys_time_stub)
+  local_mocked_bindings(get_current_time = sys_time_stub)
 
   expect_false(is_enabled(feature_flag))
 })
@@ -53,7 +53,7 @@ test_that("Time period feature flags bounded `to` are enabled until specified bo
   )
 
   sys_time_stub <- function() ISOdatetime(1990, 1, 1, 9, 0, 0, tz = "UTC")
-  mockery::stub(is_enabled.time_period_feature_flag, "Sys.time", sys_time_stub)
+  local_mocked_bindings(get_current_time = sys_time_stub)
 
   expect_true(is_enabled(feature_flag))
 })
@@ -65,7 +65,7 @@ test_that("Time period feature flags bounded to are disabled from specified boun
   )
 
   sys_time_stub <- function() ISOdatetime(2020, 1, 1, 10, 59, 59, tz = "UTC")
-  mockery::stub(is_enabled.time_period_feature_flag, "Sys.time", sys_time_stub)
+  local_mocked_bindings(get_current_time = sys_time_stub)
 
   expect_false(is_enabled(feature_flag))
 })
