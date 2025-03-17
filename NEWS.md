@@ -5,6 +5,7 @@
 * Added percentage feature flags
 * Added time period feature flags
 * Added connect user feature flag (#31)
+* Fix missing error messages in flag constructors (#38)
 
 # featureflag 0.1.0
 
