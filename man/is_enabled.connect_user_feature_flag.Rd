@@ -32,7 +32,7 @@ on the logged-in user
     expr = is_enabled(flag)
   )
 
-  # Returns FALSE if the session$user does not matche the specified users
+  # Returns FALSE if the session$user does not match the specified users
   mock_session <- shiny::MockShinySession$new()
   mock_session$user <- "user2"
   shiny::withReactiveDomain(

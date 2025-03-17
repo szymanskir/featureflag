@@ -2,3 +2,4 @@
 - [ ] Docs are updated if applicable
 - [ ] Self review was performed
 - [ ] CI is passing
+- [ ] `devtools::document()` was run

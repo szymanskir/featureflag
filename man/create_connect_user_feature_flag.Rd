@@ -3,7 +3,7 @@
 \name{create_connect_user_feature_flag}
 \alias{create_connect_user_feature_flag}
 \title{Creates an instance of a connect feature flag
-with the specified bool value.}
+that is enabled for specific users}
 \usage{
 create_connect_user_feature_flag(users)
 }
@@ -16,7 +16,7 @@ feature flag that is enabled for specific users
 }
 \description{
 Creates an instance of a connect feature flag
-with the specified bool value.
+that is enabled for specific users
 }
 \examples{
 {
