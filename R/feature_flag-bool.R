@@ -22,7 +22,10 @@
 #'   disabled_flag <- create_bool_feature_flag(FALSE)
 #' }
 create_bool_feature_flag <- function(value) {
-  assert(is.logical(value) && length(value) == 1)
+  assert(
+    is.logical(value) && length(value) == 1,
+    error = "'value' should be a logical of length 1"
+  )
 
   flag <- create_feature_flag()
   flag$value <- value
