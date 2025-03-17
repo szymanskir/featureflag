@@ -4,6 +4,10 @@ test_that("bool feature flag create method checks the correctness of arguments",
   expect_error(create_bool_feature_flag(c(TRUE, FALSE)))
 })
 
+test_that("bool feature flag create method should provide a useful error message", {
+  expect_snapshot_error(create_bool_feature_flag("not_a_logical"))
+})
+
 test_that("bool feature flag is enabled when its value is set to TRUE", {
   flag <- create_bool_feature_flag(TRUE)
   expect_true(is_enabled(flag))
