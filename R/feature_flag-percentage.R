@@ -22,8 +22,14 @@
 #'   randomly_enabled_flag <- create_percentage_feature_flag(percentage = 0.5)
 #' }
 create_percentage_feature_flag <- function(percentage) {
-  assert(length(percentage) == 1)
-  assert(percentage >= 0 && percentage <= 1)
+  assert(
+    length(percentage) == 1 && is.numeric(percentage),
+    "'percentage' should be a numeric of length 1"
+  )
+  assert(
+    percentage >= 0 && percentage <= 1,
+    "'percentage' should be a value from 0 to 1"
+  )
 
   flag <- create_feature_flag()
   flag$percentage <- percentage
