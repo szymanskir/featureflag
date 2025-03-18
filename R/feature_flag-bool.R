@@ -26,6 +26,10 @@ create_bool_feature_flag <- function(value) {
     is.logical(value) && length(value) == 1,
     error = "'value' should be a logical of length 1"
   )
+  assert(
+    !is.na(value),
+    error = "'value' should not be NA"
+  )
 
   flag <- create_feature_flag()
   flag$value <- value
