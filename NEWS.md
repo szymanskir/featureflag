@@ -6,6 +6,7 @@
 * Added time period feature flags
 * Added connect user feature flag (#31)
 * Fix missing error messages in flag constructors (#38)
+* Fix: bool feature flags throw an error when 'NA' is passed (#39)
 
 # featureflag 0.1.0
 
