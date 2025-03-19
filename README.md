@@ -82,7 +82,7 @@ feature_ifelse(
 ### Shiny example
 
 The source code of all examples is available in the [examples
-folder](https://github.com/szymanskir/featureflag/tree/master/examples)
+folder](https://github.com/szymanskir/featureflag/tree/main/examples)
 of the repository.
 
 Feature flags can be especially useful when developing shiny
@@ -135,4 +135,4 @@ production:
 You can create feature flags that are turned on based on your own custom
 criteria. The procedure on how to define your own feature flag is
 presented in [this
-tutorial](https://github.com/szymanskir/featureflag/blob/master/docs/define-custom-feature-flags.md)
+tutorial](https://github.com/szymanskir/featureflag/blob/main/docs/define-custom-feature-flags.md)
