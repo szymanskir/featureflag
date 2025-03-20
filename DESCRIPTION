@@ -20,7 +20,8 @@ Suggests:
     spelling,
     knitr,
     rmarkdown,
-    shiny
+    shiny,
+    withr
 Language: en-US
 URL: https://github.com/szymanskir/featureflag
 BugReports: https://github.com/szymanskir/featureflag/issues
