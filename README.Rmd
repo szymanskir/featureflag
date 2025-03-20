@@ -79,7 +79,7 @@ feature_ifelse(
 
 ### Shiny example
 
-The source code of all examples is available in the [examples folder](https://github.com/szymanskir/featureflag/tree/master/examples) of the repository.
+The source code of all examples is available in the [examples folder](https://github.com/szymanskir/featureflag/tree/main/examples) of the repository.
 
 Feature flags can be especially useful when developing shiny applications. The example below shows how feature flags can be used to turn parts application on and off -- in this case an extra instance of the counter module.
 
@@ -123,5 +123,5 @@ production:
 
 ## Create your own feature flag
 
-You can create feature flags that are turned on based on your own custom criteria. The procedure on how to define your own feature flag is presented in [this tutorial](https://github.com/szymanskir/featureflag/blob/master/docs/define-custom-feature-flags.md)
+You can create feature flags that are turned on based on your own custom criteria. The procedure on how to define your own feature flag is presented in [this tutorial](https://github.com/szymanskir/featureflag/blob/main/docs/define-custom-feature-flags.md)
 
