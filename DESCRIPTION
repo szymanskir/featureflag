@@ -1,6 +1,6 @@
 Package: featureflag
 Title: Turn Features On and Off using Feature Flags
-Version: 0.1.0.9000
+Version: 0.2.0
 Authors@R: 
     person(given = "Ryszard",
            family = "Szymański",

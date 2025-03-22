@@ -1,6 +1,4 @@
-# featureflag (development version)
-
-# feature flag 0.1.0.9000
+# featureflag 0.2.0
 
 * Added percentage feature flags
 * Added time period feature flags
